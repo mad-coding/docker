@@ -16,6 +16,7 @@ services:
     - ./pyone/PyOne:/root/PyOne
     depends_on:
       - mongodb
+      - redis
 
   mongodb:
     image: mvertes/alpine-mongo
