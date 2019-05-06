@@ -4,6 +4,10 @@
 
 Dockerfile根据[TimeBye/docker-pyone](https://github.com/TimeBye/docker-pyone/blob/master/Dockerfile.alpine)修改而来
 
+使用优化后的aria2
+
+PyOne的wiki: [wiki](https://wiki.pyone.me/) , 请仔细查看
+
 - ## 使用方法:
 
 1. 从打包好的镜像运行:
