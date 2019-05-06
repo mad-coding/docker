@@ -1,0 +1,32 @@
+version: "3"
+services:
+  pyone:
+    image: 9527tech/pyone
+    restart: always
+    ports:
+      - "23456:23456"
+    environment:
+    - TZ=Asia/Shanghai
+    # - PORT=80
+    # - DISABLE_REFRESH_CACHE=true
+    - REFRESH_CACHE_ALL=0 3 */1 * *
+    - REFRESH_CACHE_NEW=*/15 * * * *
+    volumes:
+    - ./pyone/data:/data
+    - ./pyone/PyOne:/root/PyOne
+    depends_on:
+      - mongodb
+
+  mongodb:
+    image: mvertes/alpine-mongo
+    restart: always
+
+  redis:
+    image: redis:5.0.4-alpine
+    restart: always
+
+volumes:
+  mongodb-data:
+  redis-data:
+
+
