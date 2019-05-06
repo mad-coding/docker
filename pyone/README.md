@@ -31,4 +31,6 @@ docker build -t 9527tech/pyone .
 docker-compose up -d
 ```
 
+之后访问http://ip:23456即可
+
 ### P.S. pyone默认密码为:PyOne, 请及时修改密码
